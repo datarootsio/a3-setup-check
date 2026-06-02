@@ -1,0 +1,8 @@
+[project]
+name = "a3-setup-check"
+version = "0.0.1"
+description = "Minimal reference repo to verify a Docker + uv + Git toolchain works end to end."
+requires-python = ">=3.11"
+
+[dependency-groups]
+dev = ["pytest"]

@@ -10,6 +10,10 @@ There are two layers to validating a setup:
 2. **End-to-end smoke test** — clone this repo and run four commands that
    confirm the whole chain works *together*.
 
+> 📋 This repo covers the **tooling** prerequisites. For the full picture — required setup,
+> prerequisite knowledge, and refresher tracks — see the
+> [Agentic AI Academy prep package](prep-package.md).
+
 ---
 
 ## 1. Quick per-tool check
@@ -29,11 +33,13 @@ uv python list                 # should show 3.11+
 # Git + GitHub access (auth is the usual failure point, not git itself)
 git --version
 ssh -T git@github.com          # SSH: expect a "successfully authenticated" message
+
+# Azure CLI — just needs to be *installed*; account access comes on day 1
+az --version
 ```
 
-> **Cloning private/org repos?** The most reliable check is to clone the actual target repo —
-> that also confirms org / SSO authorization, which is the blocker that otherwise only surfaces
-> on day one.
+> **No need for `az` sign-in check** Azure account access is handed out on day 1, so don't
+> expect to be signed in yet — having the `az` CLI installed is all you need beforehand.
 
 ---
 
